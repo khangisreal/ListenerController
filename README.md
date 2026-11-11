@@ -11,7 +11,7 @@
   <img src="https://img.shields.io/badge/release-v2.0.0--alpha-blue" alt="Release v2.0.0-alpha" />
   <img src="https://img.shields.io/badge/manifest-v3-success" alt="Manifest V3" />
   <img src="https://img.shields.io/badge/platform-Chromium-orange" alt="Platform Chromium" />
-  <img src="https://img.shields.io/badge/license-MIT-brightgreen" alt="License MIT" />
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/license-GPLv3-red" alt="License GPLv3" /></a>
 </p>
 
 **ListenerController** is a lightweight, modular browser extension that automatically detects all active `EventListeners` on any website and lets you turn each one **ON** or **OFF** in real time.
