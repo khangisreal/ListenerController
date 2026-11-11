@@ -8,9 +8,9 @@
 <h1 align="center">ListenerController</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/release-v2.0.0--alpha-blue" alt="Release v2.0.0-alpha" />
-  <img src="https://img.shields.io/badge/manifest-v3-success" alt="Manifest V3" />
-  <img src="https://img.shields.io/badge/platform-Chromium-orange" alt="Platform Chromium" />
+  <a href="../../releases/latest"><img src="https://img.shields.io/github/v/release/khangisreal/ListenerController?include_prereleases&label=release&color=blue" alt="Latest Release" /></a>
+  <a href="https://developer.chrome.com/docs/extensions/develop/migrate/what-is-mv3"><img src="https://img.shields.io/badge/manifest-v3-success" alt="Manifest V3" /></a>
+  <a href="https://www.chromium.org/Home/"><img src="https://img.shields.io/badge/platform-Chromium-orange" alt="Platform Chromium" /></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/license-GPLv3-red" alt="License GPLv3" /></a>
 </p>
 
@@ -84,3 +84,9 @@ ListenerController/
     ├── storage.js         # Storage CRUD, domain matching & state migration
     └── ui.js              # DOM rendering for domain boxes, listeners & settings
 ```
+
+---
+
+## License
+
+ListenerController is licensed under the **GNU General Public License v3.0 (GPL-3.0)** — see the [LICENSE](./LICENSE) file for details.
