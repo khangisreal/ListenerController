@@ -1,0 +1,500 @@
+/* CheapTrick - Modular Popup Stylesheet with Smooth Light/Dark Mode Transitions */
+
+:root {
+  --bg-page: #ffffff;
+  --bg-container: #fafbfc;
+  --bg-box: #f4f6f9;
+  --bg-box-hover: #eef1f6;
+  --bg-panel: #ffffff;
+  --bg-input: #ffffff;
+  --bg-btn-subtle: #e9ecef;
+  --bg-btn-subtle-hover: #dde2e7;
+  --bg-badge: #e5e7eb;
+  --bg-row-hover: #f8fafc;
+  --border-color: #dce1e8;
+  --border-subtle: #edf0f5;
+  --primary: #007bff;
+  --primary-hover: #0056b3;
+  --danger: #e53935;
+  --danger-hover: #c62828;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --scroll-track: #f1f3f5;
+  --scroll-thumb: #c1c8d1;
+  --scroll-thumb-hover: #9aa3af;
+  --radius-md: 6px;
+  --radius-sm: 4px;
+  --theme-transition: background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                      color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                      border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                      box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body[data-theme="dark"] {
+  --bg-page: #12161f;
+  --bg-container: #171c26;
+  --bg-box: #1e2532;
+  --bg-box-hover: #252e3e;
+  --bg-panel: #161b24;
+  --bg-input: #1a202c;
+  --bg-btn-subtle: #252d3d;
+  --bg-btn-subtle-hover: #303a4f;
+  --bg-badge: #2d3748;
+  --bg-row-hover: #1e2636;
+  --border-color: #2e3846;
+  --border-subtle: #232b38;
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --danger: #ef4444;
+  --danger-hover: #dc2626;
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --scroll-track: #171c26;
+  --scroll-thumb: #374151;
+  --scroll-thumb-hover: #4b5563;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body.theme-animate,
+body.theme-animate .domain-list-box,
+body.theme-animate .domain-box,
+body.theme-animate .domain-header,
+body.theme-animate .listener-dropdown,
+body.theme-animate .listener-list,
+body.theme-animate .listener-item,
+body.theme-animate .settings-panel,
+body.theme-animate .setting-row,
+body.theme-animate input[type="text"],
+body.theme-animate .icon-btn,
+body.theme-animate .mini-btn,
+body.theme-animate .listener-count-badge {
+  transition: var(--theme-transition);
+}
+
+body {
+  width: 335px;
+  font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  padding: 12px;
+  margin: 0;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+}
+
+/* Header row & Action Icons */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.app-logo {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 28px;
+  padding: 0 8px;
+  font-size: 11px;
+  font-weight: 600;
+  background-color: var(--bg-btn-subtle);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  user-select: none;
+}
+
+.icon-btn:hover,
+.icon-btn.active {
+  background-color: var(--bg-btn-subtle-hover);
+  border-color: var(--primary);
+}
+
+.icon-btn svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-toggle-btn:hover svg {
+  transform: rotate(22deg) scale(1.08);
+}
+
+.lang-code {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* Input & Add Button */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 7px 9px;
+  background-color: var(--bg-input);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  outline: none;
+}
+
+input[type="text"]::placeholder {
+  color: var(--text-muted);
+}
+
+input[type="text"]:focus {
+  border-color: var(--primary);
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 7px;
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.primary-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Collapsible Settings Panel */
+.settings-panel {
+  display: none;
+  background: var(--bg-box);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  max-height: 185px;
+  overflow-y: auto;
+}
+
+.settings-panel.open {
+  display: block;
+}
+
+.settings-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 6px;
+}
+
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 0;
+  font-size: 12px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.setting-row:last-child {
+  border-bottom: none;
+}
+
+.setting-row label {
+  cursor: pointer;
+  flex: 1;
+  line-height: 1.3;
+}
+
+/* Outer Scrollable Box that contains the Domain Boxes */
+.domain-list-box {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 6px;
+  background: var(--bg-container);
+  max-height: 260px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.domain-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.empty-domains {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 12px;
+  padding: 14px 8px;
+}
+
+/* Individual Domain Box */
+.domain-box {
+  background: var(--bg-box);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.domain-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
+  gap: 6px;
+  user-select: none;
+}
+
+.domain-header:hover {
+  background: var(--bg-box-hover);
+}
+
+.domain-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+}
+
+/* Arrow Icon Button on the side of the domain box */
+.arrow-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--text-main);
+  cursor: pointer;
+  border-radius: 3px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, background-color 0.15s ease;
+}
+
+.arrow-btn:hover {
+  background-color: rgba(128, 128, 128, 0.15);
+}
+
+.arrow-btn.expanded {
+  transform: rotate(90deg);
+}
+
+.domain-name {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.listener-count-badge {
+  font-size: 11px;
+  color: var(--text-muted);
+  background: var(--bg-badge);
+  padding: 1px 6px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.del-btn {
+  width: auto;
+  background: var(--danger);
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 3px 7px;
+  font-size: 11px;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease;
+}
+
+.del-btn:hover {
+  background: var(--danger-hover);
+}
+
+/* Pop-down Event Listeners Panel inside Domain Box */
+.listener-dropdown {
+  display: none;
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-panel);
+  padding: 6px;
+}
+
+.listener-dropdown.expanded {
+  display: block;
+}
+
+.listener-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 0 2px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.bulk-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.mini-btn {
+  width: auto;
+  padding: 2px 6px;
+  font-size: 10px;
+  background: var(--bg-btn-subtle);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.mini-btn:hover {
+  background: var(--bg-btn-subtle-hover);
+  border-color: var(--primary);
+}
+
+/* Scrollable Event Listener List inside each Domain Box */
+.listener-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 145px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+}
+
+.listener-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 12px;
+}
+
+.listener-item:last-child {
+  border-bottom: none;
+}
+
+.listener-item:hover {
+  background-color: var(--bg-row-hover);
+}
+
+.listener-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.listener-name {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 12px;
+  color: var(--text-main);
+  word-break: break-all;
+}
+
+.listener-name.is-off {
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.listener-checkbox {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  cursor: pointer;
+  accent-color: var(--primary);
+  flex-shrink: 0;
+}
+
+.empty-listeners {
+  padding: 10px 8px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* Custom Scrollbars for both Domain List Box and Event Listener List */
+.domain-list-box::-webkit-scrollbar,
+.listener-list::-webkit-scrollbar,
+.settings-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.domain-list-box::-webkit-scrollbar-track,
+.listener-list::-webkit-scrollbar-track,
+.settings-panel::-webkit-scrollbar-track {
+  background: var(--scroll-track);
+  border-radius: 3px;
+}
+
+.domain-list-box::-webkit-scrollbar-thumb,
+.listener-list::-webkit-scrollbar-thumb,
+.settings-panel::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border-radius: 3px;
+}
+
+.domain-list-box::-webkit-scrollbar-thumb:hover,
+.listener-list::-webkit-scrollbar-thumb:hover,
+.settings-panel::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-hover);
+}

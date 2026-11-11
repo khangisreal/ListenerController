@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ListenerController</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body data-theme="light">
+  <div class="header-row">
+    <div class="brand-group">
+      <img src="icon.png" alt="ListenerController" class="app-logo" />
+      <h3 id="headerTitle">URL List</h3>
+    </div>
+    <div class="header-actions">
+      <!-- Language Switcher Icon Button (EN / VI) -->
+      <button type="button" id="langToggleBtn" class="icon-btn lang-toggle-btn" title="Switch language: English / Tiếng Việt">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span id="langCode" class="lang-code">EN</span>
+      </button>
+
+      <!-- Light / Dark Mode Icon Button -->
+      <button type="button" id="themeToggleBtn" class="icon-btn theme-toggle-btn" title="Switch to Dark Mode"></button>
+
+      <!-- Settings Toggle Icon Button -->
+      <button type="button" id="settingsToggleBtn" class="icon-btn settings-toggle-btn" title="Toggle Settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="settingsPanel" class="settings-panel"></div>
+
+  <div class="input-group">
+    <input type="text" id="domainInput" placeholder="e.g. example.com" autocomplete="off" />
+    <button type="button" id="addBtn" class="primary-btn">Add URL</button>
+  </div>
+
+  <!-- Scrollable box containing the domain boxes -->
+  <div id="domainListBox" class="domain-list-box">
+    <ul id="domainList" class="domain-list"></ul>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
